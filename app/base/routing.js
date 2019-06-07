@@ -9,7 +9,8 @@
       $stateProvider
         .state('home', {
           url: "/",
-          templateUrl: "home/home.html"
+          templateUrl: "home/home.html",
+          controller: "myCtrl"
         })
         .state('github', {
           url: "/github",

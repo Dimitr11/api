@@ -15,6 +15,20 @@ var notify = require('gulp-notify');
 var filelog = require('gulp-filelog');
 
 var rimraf = require('gulp-rimraf');
+var gulp = require("gulp");
+var jsonServer = require("gulp-json-srv");
+
+var server = jsonServer.create();
+gulp.task("start", function(){
+    return gulp.src("data.json")
+        .pipe(server.pipe());
+});
+//var serve = require('gulp-serve');
+
+gulp.task( 'default', [ 'webserver', 'jsonServer'] );
+/*gulp.task('default', function() {
+  gulp.run('serve');
+});*/
 
 gulp.task('clean', function() {
   return gulp.src('build/*', { read: false })
@@ -83,3 +97,5 @@ gulp.task('webserver', ['html', 'js', 'bower'], function() {
   gulp.watch('app/**/*.js', ['js']);
   gulp.watch('bower_components', ['bower']);
 });
+
+module.exports = gulp;

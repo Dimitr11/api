@@ -9,6 +9,7 @@
     "gulp-filelog": "^0.2.0",
     "gulp-filter": "^1.0.2",
     "gulp-jshint": "^1.8.4",
+    "gulp-json-srv": "^1.2.0",
     "gulp-ng-annotate": "^0.3.0",
     "gulp-notify": "^1.5.1",
     "gulp-plumber": "^0.6.5",
@@ -20,7 +21,10 @@
     "jshint-stylish": "^0.4.0",
     "main-bower-files": "^2.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^6.9.0",
+    "sort-json-array": "^0.1.7"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
