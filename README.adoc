@@ -1,28 +1,4 @@
 = angular-bower-gulp
-Andreas Jägle <mail@ajaegle.de>
-
-A sample project showing how to integrate angularjs with bower and gulp,
-especially concerning the handling of third party scripts and assets.
-
-This project therefore integrates some javascript libraries and angular modules
-to demonstrate how this can be used easily with gulp.
-
-The key features are:
-
-* the app is structured using angular ui-router
-* scopes are used explicitly using the controllerAs mechanism
-* the angular services and controllers are wrapped in IIFEs
-* angular dependency injection using ng-annotate for DRY
-
-* during development there is a live reload webserver
-* the bower components are bundled together without explicitly listing them
-* jshint is triggered on every change, errors are reported to the notification center
-
-== Requirements
-
-For building and running this application, there are some requirements for the
-environment. The build is done using gulp (which is a node module) and uses bower
-for all browser dependencies (javascript, css).
 
 To build the application, you need to have the following modules installed
 globally:
@@ -33,33 +9,7 @@ globally:
 
 == Running the application
 
-To run the appliation, it's necessary to install all dependencies used for
-building and packaging within the application. The gulp task then runs a
-webserver with live reload capabilities. So every change to one of the project
-files results in an immediate reloading. On Mac OS, Linux and Windows > 7
-there will be notifications when some build error is detected.
-
 [source,bash]
 npm install
 bower install
 gulp webserver
-
-== Contents of the application
-
-The project uses angularjs 1.2 and the great ui-router module for structuring
-the application code and handling navigation. The individual pages use the
-$http service or the restangular module to connect to some rest services. The
-places views integrate the angular-leaflet-directive to show some map component.
-
-== Drawbacks
-
-This is a sample project used to check out some features and third party
-libraries for angularjs together with the gulp build process. Due to this, there
-may be some hard coded paths and servers that will not be accessible for you.
-Nevertheless I will try to keep these references to a minimum, so that the
-project still can be run without having access to these systems.
-
-Currently there are the following drawbacks:
-
-* the elasticsearch service fetches data from a certain hard coded url.
-* handling css / images from bower still needs some cleanup.

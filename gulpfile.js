@@ -25,7 +25,7 @@ gulp.task("start", function(){
 });
 //var serve = require('gulp-serve');
 
-gulp.task( 'default', [ 'webserver', 'jsonServer'] );
+gulp.task( 'default', [ 'webserver'] );
 /*gulp.task('default', function() {
   gulp.run('serve');
 });*/
